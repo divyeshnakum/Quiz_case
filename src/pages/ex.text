@@ -1,0 +1,50 @@
+import iconLogout from "../assets/icons/logout.png";
+
+import iconDashbordFill from "../assets/icons/admin-dashboard-fill.png";
+import iconStudentFill from "../assets/icons/admin-students-fill.png";
+import iconQuizzeFill from "../assets/icons/admin-quizzes-Fill.png";
+import icnoRewaredFill from "../assets/icons/admin-rewards-fill.png";
+import iconPaymentFill from "../assets/icons/admin-payment-fill.png";
+import iconAnalyticsFill from "../assets/icons/admin-analytics-fill.png";
+import iconSettingFill from "../assets/icons/setting-fill.png";
+
+
+export const textColPrimary = "text-[#1A1A1A]";
+
+
+
+
+import { Listbox } from "@headlessui/react";
+import { useState } from "react";
+
+const VerificationDropdown = () => {
+  const [selected, setSelected] = useState(null);
+  const options = ["Verified", "Rejected", "Pending"];
+
+  return (
+    <Listbox value={selected} onChange={setSelected}>
+      <div className="relative w-56">
+        <Listbox.Button className="w-full px-4 py-2 text-left border rounded-lg bg-white">
+          {selected || "Verification status"}
+        </Listbox.Button>
+        <Listbox.Options className="absolute mt-1 w-full bg-blue-200 rounded-lg shadow-lg z-10">
+          {options.map((option) => (
+            <Listbox.Option
+              key={option}
+              value={option}
+              className={({ active }) =>
+                `cursor-pointer select-none px-4 py-2 ${
+                  active ? "bg-blue-400 text-white" : "text-black"
+                }`
+              }
+            >
+              {option}
+            </Listbox.Option>
+          ))}
+        </Listbox.Options>
+      </div>
+    </Listbox>
+  );
+};
+
+export default VerificationDropdown;

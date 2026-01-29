@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+body {
+  background-color: #f8f8f8;
+}
+/* existing Tailwind stuff already here */
+/* do NOT remove anything above */
+
+/* ==============================
+   THEME VARIABLES
+============================== */
+:root {
+  --base-yellow: #ffb800;
+  --hover-yellow: #e0a200;
+  --button-yellow: #ffeab4;
+
+  --text-primary: #1a1a1a;
+  --text-secondary: #2a2a2a;
+  --text-gray: #4b5563;
+
+  --bg-main: #f8f8f8;
+  --bg-card: #ffffff;
+  --light-shade: #fff3cc;
+
+  --border-color: #e5e5e5;
+
+  --success: #26c681;
+  --error: #ff4b4b;
+  --info: #3a78f2;
+
+  /* ... other vars ... */
+  --text-label: #2d3748; /* original dark blue-gray */
+}
+
+.dark {
+  /* Brand / Buttons */
+  --base-yellow: #ffb800;
+  --hover-yellow: #e0a200;
+  --button-yellow: #786218;
+
+  /* Text colors */
+  --text-primary: #ffffff; /* FULL white */
+  --text-secondary: #ffffff; /* Light gray for secondary text */
+  --text-gray: #ababab; /* keep muted gray if needed */
+
+  /* Backgrounds */
+  --bg-main: #1b1b1c;
+  --bg-card: #444444; /* change from white to dark card */
+  --light-shade: #838383;
+
+  /* Borders */
+  --border-color: #826464;
+
+  /* Status */
+  --success: #22c55e;
+  --error: #ef4444;
+  --info: #3b82f6;
+
+  --text-label: #cbd5e1;
+}
+
+/* ==============================
+   CUSTOM UTILITIES
+============================== */
+
+.bg-baseYel {
+  background-color: var(--base-yellow);
+}
+.bg-bgMain {
+  background-color: var(--bg-main);
+}
+.bg-bgCard {
+  background-color: var(--bg-card);
+}
+.bg-lightShade {
+  background-color: var(--light-shade);
+}
+.bg-buttonYel {
+  background-color: var(--button-yellow);
+}
+
+.hover\:bg-hoverYel:hover {
+  background-color: var(--hover-yellow);
+}
+
+.text-textPrimary {
+  color: var(--text-primary);
+}
+.text-textSecondary {
+  color: var(--text-secondary);
+}
+.text-textGray {
+  color: var(--text-gray);
+}
+
+.border-borderCol {
+  border-color: var(--border-color);
+}
+
+.bg-success {
+  background-color: var(--success);
+}
+.bg-error {
+  background-color: var(--error);
+}
+.bg-info {
+  background-color: var(--info);
+}
+.text-textLabel {
+  color: var(--text-label);
+}
